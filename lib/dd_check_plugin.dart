@@ -7,7 +7,7 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_ce/hive.dart';
 import 'package:network_info_plus/network_info_plus.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
@@ -18,17 +18,12 @@ import 'model/socket_send_model.dart';
 import 'model/swift_ui_action.dart';
 import 'sp/sp_model.dart';
 
-part 'ip_util.dart';
-
-part 'socket_connect.dart';
-
-part 'interceptors/dio_http_request.dart';
-
-part 'interceptors/server_message_handle.dart';
-
 part 'default_message_handle.dart';
-
 part 'hive/hive_tool.dart';
+part 'interceptors/dio_http_request.dart';
+part 'interceptors/server_message_handle.dart';
+part 'ip_util.dart';
+part 'socket_connect.dart';
 
 const kProjectName = 'dd_check_plugin';
 

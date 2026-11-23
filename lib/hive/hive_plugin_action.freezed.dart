@@ -1,6 +1,5 @@
-// dart format width=80
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -91,6 +90,196 @@ class _$HivePluginActionCopyWithImpl<$Res>
           : projectName // ignore: cast_nullable_to_non_nullable
               as String,
     ));
+  }
+}
+
+/// Adds pattern-matching-related methods to [HivePluginAction].
+extension HivePluginActionPatterns on HivePluginAction {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HiveGetKeys value)? getKeys,
+    TResult Function(HiveGetBoxs value)? getBoxList,
+    TResult Function(HiveGetValue value)? getValue,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case HiveGetKeys() when getKeys != null:
+        return getKeys(_that);
+      case HiveGetBoxs() when getBoxList != null:
+        return getBoxList(_that);
+      case HiveGetValue() when getValue != null:
+        return getValue(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HiveGetKeys value) getKeys,
+    required TResult Function(HiveGetBoxs value) getBoxList,
+    required TResult Function(HiveGetValue value) getValue,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case HiveGetKeys():
+        return getKeys(_that);
+      case HiveGetBoxs():
+        return getBoxList(_that);
+      case HiveGetValue():
+        return getValue(_that);
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(HiveGetKeys value)? getKeys,
+    TResult? Function(HiveGetBoxs value)? getBoxList,
+    TResult? Function(HiveGetValue value)? getValue,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case HiveGetKeys() when getKeys != null:
+        return getKeys(_that);
+      case HiveGetBoxs() when getBoxList != null:
+        return getBoxList(_that);
+      case HiveGetValue() when getValue != null:
+        return getValue(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String projectName, String boxName)? getKeys,
+    TResult Function(String projectName)? getBoxList,
+    TResult Function(String projectName, String key, String boxName)? getValue,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case HiveGetKeys() when getKeys != null:
+        return getKeys(_that.projectName, _that.boxName);
+      case HiveGetBoxs() when getBoxList != null:
+        return getBoxList(_that.projectName);
+      case HiveGetValue() when getValue != null:
+        return getValue(_that.projectName, _that.key, _that.boxName);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String projectName, String boxName) getKeys,
+    required TResult Function(String projectName) getBoxList,
+    required TResult Function(String projectName, String key, String boxName)
+        getValue,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case HiveGetKeys():
+        return getKeys(_that.projectName, _that.boxName);
+      case HiveGetBoxs():
+        return getBoxList(_that.projectName);
+      case HiveGetValue():
+        return getValue(_that.projectName, _that.key, _that.boxName);
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String projectName, String boxName)? getKeys,
+    TResult? Function(String projectName)? getBoxList,
+    TResult? Function(String projectName, String key, String boxName)? getValue,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case HiveGetKeys() when getKeys != null:
+        return getKeys(_that.projectName, _that.boxName);
+      case HiveGetBoxs() when getBoxList != null:
+        return getBoxList(_that.projectName);
+      case HiveGetValue() when getValue != null:
+        return getValue(_that.projectName, _that.key, _that.boxName);
+      case _:
+        return null;
+    }
   }
 }
 
