@@ -1,3 +1,7 @@
+# 5.2.0
+
+* Allow package_info_plus 10.x and network_info_plus 8.x (both move to win32 6), so apps can upgrade them.
+
 # 5.1.1
 
 * 依赖升级
